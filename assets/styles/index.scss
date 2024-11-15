@@ -1,0 +1,31 @@
+body {
+  background-color: rgb(53, 53, 53);
+  color: rgb(202, 202, 202);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh;
+
+  & > #app {
+    min-height: inherit;
+  }
+}
+
+
+$y-flip-rotation: 90deg;
+
+.y-flip-transition-enter-active,
+.y-flip-transition-leave-active {
+  transition: all .1s;
+}
+
+.y-flip-transition-enter-from {
+  transform: rotateY(-$y-flip-rotation);
+}
+
+.y-flip-transition-leave-to {
+  transform: rotateY($y-flip-rotation);
+}
