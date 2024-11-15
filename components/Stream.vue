@@ -19,7 +19,7 @@ const props = defineProps<{
 
 <style scoped lang="scss">
 .video-stream {
-  height: 225;
+  height: 300px;
 
   max-width: 90vw;
 }

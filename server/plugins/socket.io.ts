@@ -1,6 +1,5 @@
 import { Server as Engine } from "engine.io";
 import { Server } from "socket.io";
-import { v4 } from "uuid";
 import { CallEvent } from "~/enums/call-event";
 
 export default defineNitroPlugin(app => {

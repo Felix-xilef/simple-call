@@ -17,7 +17,6 @@ const iceServers: RTCIceServer[] = [
 ];
 
 
-
 const router = useRouter();
 
 const alertsStore = useAlertsStore();
@@ -65,18 +64,11 @@ async function getQueryData() {
 }
 
 async function startLocalStream() {
-  const {
-    height: displayHeight,
-    width: displayWidth,
-  } = useDisplay();
-
   try {
     localStream.value = await navigator.mediaDevices.getUserMedia({
       video: isVideoOn.value ?
         {
-          aspectRatio: displayHeight.value < displayWidth.value ?
-            16/9 :
-          9/16,
+          aspectRatio: 16/9,
           facingMode: 'user',
         } :
       false,
@@ -314,10 +306,14 @@ watch(
       >
     </v-expand-transition>
 
-    <v-row no-gutters>
+    <v-row
+      class="stream-list"
+      justify="center"
+      no-gutters
+    >
       <v-col
         v-if="localStream?.active"
-        cols="6"
+        cols="auto"
       >
         <Stream
           :stream="localStream"
@@ -327,7 +323,7 @@ watch(
 
       <v-col
         v-if="remoteStream?.active"
-        cols="6"
+        cols="auto"
       >
         <Stream :stream="remoteStream"/>
       </v-col>
@@ -393,6 +389,10 @@ watch(
     width: 200px;
 
     align-self: center;
+  }
+
+  .stream-list {
+    gap: 20px;
   }
 }
 </style>
