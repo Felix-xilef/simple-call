@@ -4747,13 +4747,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jose@npm:^5.9.6":
-  version: 5.9.6
-  resolution: "jose@npm:5.9.6"
-  checksum: 10c0/d6bcd8c7d655b5cda8e182952a76f0c093347f5476d74795405bb91563f7ab676f61540310dd4b1531c60d685335ceb600571a409551d2cbd2ab3e9f9fbf1e4d
-  languageName: node
-  linkType: hard
-
 "js-levenshtein@npm:^1.1.6":
   version: 1.1.6
   resolution: "js-levenshtein@npm:1.1.6"
@@ -5612,7 +5605,6 @@ __metadata:
     "@types/qrcode": "npm:^1"
     "@types/uuid": "npm:^10.0.0"
     engine.io: "npm:^6.6.2"
-    jose: "npm:^5.9.6"
     nuxt: "npm:^3.14.159"
     qrcode: "npm:^1.5.4"
     sass: "npm:^1.80.6"
